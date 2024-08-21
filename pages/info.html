@@ -30,6 +30,39 @@
 		</nav>
     </header>
     <main>
+        <div class="formulario">
+            <h2>Contacta con nosotros:</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <form id="contactForm" netlify action="" method="POST">
+                        <p>
+                            <label>Nombre y Apellido</label>
+                            <input required type="text" name="nombre y apellido" id="nombre">
+                        </p>
+                        <p>
+                            <label>E-mail</label>
+                            <input required type="email" name="Email" id="email">
+                        </p>
+                        <p>
+                            <label>Nick en el juego</label>
+                            <input required type="text" name="nickname">
+                        </p>
+                        <p>
+                            <label>Asunto</label>
+                            <input required type="text" name="asunto" id="asunto">
+                        </p>
+                        <p class="block">
+                            <label>Mensaje</label>
+                            <textarea name="text" cols="30" rows="3" id="text" required></textarea>
+                        </p>
+                        <p class="block">
+                            <button type="submit">
+                                Enviar
+                            </button>
+                        </p>
+                    </form>
+                </div>
+            </div>
         <section id="welcome">
             <t1>Normas del Juego</t1>
                 
@@ -64,21 +97,6 @@
                 <li>Asistir a un personaje (heal) desde zona de paz a otro que se encuentra fuera de ella.</li>
             </ul>
         </section>
-        <div class="contact-form">
-            <h2>Contacta con nosotros</h2>
-            <form action="/submit_contact_form" method="post">
-                <label for="name">Nombre de usuario:</label>
-                <input type="text" id="name" name="name" required>
-    
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" required></textarea>
-    
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
     </main>    
     
     <footer class="pie-pag">
