@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Añadir evento de submit al formulario
     form.addEventListener("submit", function(event) {
-        // Prevenir el envío del formulario
-        event.preventDefault();
+
 
         // Validar los campos
         if (nombre.value.trim() === "") {
