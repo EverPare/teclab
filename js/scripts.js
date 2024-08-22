@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Añadir evento de submit al formulario
     form.addEventListener("submit", function(event) {
-
+        event.preventDefault(); // Evitar el envío por defecto para hacer las validaciones
 
         // Validar los campos
         if (nombre.value.trim() === "") {
@@ -57,20 +57,20 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             return;
         }
-        
+
         // Almacenar los datos en localStorage
         localStorage.setItem("nombre", nombre.value);
         localStorage.setItem("email", email.value);
         localStorage.setItem("usuario", usuario.value);
 
-        // Si todas las validaciones pasan, se puede enviar el formulario o realizar otra acción
+        // Mostrar alerta de éxito
         Swal.fire({
             icon: "success",
             title: "Registro exitoso",
             text: "¡Tu registro se ha completado exitosamente!",
         }).then(() => {
-            // Aquí puedes redirigir al usuario o limpiar el formulario
-            form.reset();
+            // Enviar el formulario después de las validaciones
+            form.submit();
         });
     });
 });
