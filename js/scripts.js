@@ -74,3 +74,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var images = document.querySelectorAll('.carousel-item img');
+    var modalImage = document.getElementById('modalImage');
+    var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+
+    images.forEach(function(image) {
+        image.addEventListener('click', function() {
+            modalImage.src = this.src; // Establece la imagen del modal a la imagen clickeada
+            imageModal.show(); // Muestra el modal
+        });
+    });
+});
+
