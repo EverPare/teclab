@@ -88,3 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+$('.carousel').carousel({
+    interval: 2000, // Cambia la imagen cada 2 segundos
+    ride: 'carousel'
+});
