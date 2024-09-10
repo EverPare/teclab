@@ -341,7 +341,11 @@ footer {
 .h2 {
     font-family: "Bungee Tint", system-ui;
     text-align:center
-}
+    }
+
+.h3 {
+    font-family: "Bungee Tint", system-ui;
+}    
 
 .section{
     font-family: cursive;
